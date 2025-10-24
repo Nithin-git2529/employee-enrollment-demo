@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Employee Enrollment Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Employee Enrollment</h1>
+
+  <section class="card">
+    <h2>Add Employee</h2>
+    <label>Name <input id="name" type="text" placeholder="Jane Doe" /></label>
+    <label>Email <input id="email" type="email" placeholder="jane@example.com" /></label>
+    <label>Department <input id="dept" type="text" placeholder="IT" /></label>
+    <label>Start Date <input id="start" type="date" /></label>
+    <button onclick="addEmployee()">Create</button>
+    <p id="msg"></p>
+  </section>
+
+  <section class="card">
+    <h2>All Employees</h2>
+    <button onclick="loadEmployees()">Refresh</button>
+    <pre id="list"></pre>
+  </section>
+
+  <section class="card">
+    <h2>Set Status</h2>
+    <label>Employee ID <input id="empId" type="number" /></label>
+    <label>Status
+      <select id="status">
+        <option value="ENROLLED">ENROLLED</option>
+        <option value="INACTIVE">INACTIVE</option>
+      </select>
+    </label>
+    <button onclick="setStatus()">Update</button>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
